@@ -194,7 +194,7 @@ O porquê dessa escolha está em [`docs/decisoes/0001-open-core.md`](docs/deciso
 
 ## Autor
 
-**Higor** — desenvolvedor em formação, construindo o GSchool do zero como estudo de arquitetura SaaS, segurança de dados e produto.
+**Higor** — desenvolvedor , construindo o GSchool do zero como estudo de arquitetura SaaS, segurança de dados e produto.
 
 [![GitHub](https://img.shields.io/badge/GitHub-higorLTA-181717?logo=github)](https://github.com/higorLTA)
 <!-- Adicione seu LinkedIn: [![LinkedIn](https://img.shields.io/badge/LinkedIn-seu--perfil-0A66C2?logo=linkedin)](https://www.linkedin.com/in/seu-perfil) -->
