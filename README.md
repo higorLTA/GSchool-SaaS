@@ -80,7 +80,7 @@ flowchart LR
 
 - O **frontend** acessa o banco diretamente pelo SDK do Supabase, com uma chave pública (*publishable key*). A segurança fica no banco: **toda tabela tem RLS**, e um usuário só enxerga dados das escolas às quais está vinculado.
 - As **regras que envolvem dinheiro ou terceiros** (cobranças, webhooks, envio de WhatsApp) rodam em **Edge Functions**, no servidor, com uma chave secreta que nunca chega ao navegador.
-- O **modelo de dados** completo está documentado no [diagrama de classes](https://claude.ai/artifact/T1YYmUziNntKgBYnNSR3cN) e, à medida que os módulos ficarem prontos, em [`docs/`](docs/).
+- O **modelo de dados** completo está documentado em [docs/arquitetura.md](docs/arquitetura.md) e, à medida que os módulos ficarem prontos, em [`docs/`](docs/).
 
 ---
 
@@ -99,7 +99,7 @@ flowchart LR
 
 O sistema guarda dados de crianças e adolescentes, então segurança é um requisito desde o primeiro commit, não uma etapa final.
 
-- **Isolamento entre escolas:** cada registro pertence a uma instituição (`institution_id`), e políticas de RLS impedem que uma escola veja dados de outra. Esse isolamento é coberto por **testes automatizados**.
+- **Isolamento entre escolas:** cada registro pertence a uma instituição (`institution_id`), e políticas de RLS impedem que uma escola veja dados de outra. Esse isolamento será coberto por **testes automatizados** (Tópico 1).
 - **Menor privilégio:** permissões por papel (direção, secretaria, professora, financeiro, responsável). Atestados médicos e dados de saúde têm acesso ainda mais restrito.
 - **Sem acesso livre do administrador da plataforma:** acesso excepcional aos dados de uma escola é temporário, aprovado e registrado em auditoria.
 - **LGPD:** fotos de alunos só ficam visíveis com consentimento ativo do responsável; dados sensíveis ficam em armazenamento privado.
